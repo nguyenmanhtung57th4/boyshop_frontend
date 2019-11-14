@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { PayPalButton } from "react-paypal-button-v2";
+// import { PayPalButton } from "react-paypal-button-v2";
 // import axios from "axios";
 
 import NavBar from "../components/NavBar";
@@ -49,7 +49,7 @@ export default class CartScreen extends Component {
                                         <th scope="col">{items ? items.price : ""} </th>
                                         <th scope="col">{items ? items.subTotal : ""}</th>
                                     
-                                        <button onClick = {this.onDelete} type="click" className="delete">Delete</button>
+                                        <button onClick = {this.onDelete} type="click" className="btn btn-secondary delete">Delete</button>
                                         
                                     </tr>
                                 </tbody>
@@ -57,7 +57,7 @@ export default class CartScreen extends Component {
                             </table>
                         </div>
                     </div>
-                    <div className="text-center">
+                    {/* <div className="text-center">
                         <PayPalButton
                             amount="100"
                             onSuccess={(details, data) => {
@@ -72,7 +72,7 @@ export default class CartScreen extends Component {
                                 });
                             }}
                         />
-                    </div>
+                    </div> */}
 
                 <Footer />
             </div>
