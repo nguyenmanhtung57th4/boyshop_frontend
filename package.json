@@ -1,6 +1,10 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "engines": {
+    "node": "12.13.0",
+    "npm": "6.12.0"
+  },
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
@@ -16,6 +20,9 @@
     "rimraf": "^3.0.0"
   },
   "scripts": {
+    "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
+    "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;",
+    "rimraf": "./node_modules/rimraf/bin.js",
     "start": "set REACT_APP_STATE==localhost && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
