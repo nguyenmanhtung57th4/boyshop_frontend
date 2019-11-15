@@ -71,7 +71,7 @@ export default class Footer extends Component {
                 </MDBContainer>
                 <div className="footer-copyright text-center py-3">
                     <MDBContainer fluid>
-                        &copy; {new Date().getFullYear()} : <a href="/"> Unterwasche </a>
+                        &copy; {new Date().getFullYear()} : <a href="/"> BoyShop </a>
                     </MDBContainer>
                 </div>
             </MDBFooter>
